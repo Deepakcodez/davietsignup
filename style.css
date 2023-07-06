@@ -1,0 +1,155 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.left {
+    display: inline-block;
+    background: url(bg.jpg) no-repeat;
+    height: 100vh;
+    width: 58.5%;
+    position: center;
+    background-size: cover;
+}
+
+.right {
+    position: relative;
+    background: rgb(255, 255, 255);
+    width: 41.5%;
+    height: 100vh;
+    float: right;
+}
+
+.logo {
+
+    display: flex;
+}
+
+.sign {
+    /* background: #e40000; */
+    margin-top: -54px;
+    text-align: center;
+    font-size: 25px;
+}
+
+.take {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.userin {
+    width: 95%;
+    padding: 15px;
+    border-radius: 5px;
+    border: rgb(73, 72, 72) solid 1px;
+}
+.in :hover{
+
+   border : rgb(73, 72, 72) solid 2px;
+}
+
+.sub {
+    padding: 10px;
+    width: 100%;
+    margin-top: 50px;
+    border-radius: 5px;
+    background: #42549e;
+    font-weight: 700;
+    font-size: 15px;
+    color: white;
+    ;
+}
+button:hover{
+background: #1e379c;
+}
+.re{
+    display: flex;
+    justify-content: right;
+   
+    width: 90%;
+}
+.reset {
+    
+    text-decoration: underline;
+    color: blue;
+    background: #dfdede00;
+    margin-top: 9px;
+    display: flex;
+    flex-direction: row-reverse;
+
+
+}
+
+.ann {
+    display: flex;
+    border: red solid 2px;
+    background: transparent;
+    width: 350px;
+    padding: 10px;
+    /* text-align: center; */
+    border-radius: 7px;
+    color: red;
+    
+    justify-content: center;
+    flex-direction: row-reverse;
+
+
+
+}
+
+.top {
+    background: #e4e4e400;
+    height: 14rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.right-bottom {
+    /* display: flex; */
+    background: #7a323200;
+    height: 500px;
+}
+
+.in {
+    background: #ff9b9b00;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 15px;
+    width: 90%;
+}
+.a{
+    display: flex;
+    justify-content: flex-end;
+    /* background: #9c9c9c; */
+    width: 90%;
+    height: 40px;
+}
+.a button:hover{
+    background: #f6818125;
+}
+
+@media only screen and (max-width: 700px) {
+    .right {
+        position: relative;
+        background: rgb(255, 255, 255);
+        width: 100%;
+        height: 100vh;
+        float: left;
+    }
+    .left{
+        
+            display: none;
+            background: url(bg.jpg) no-repeat;
+            height: 100vh;
+            width: 100%;
+            position: center;
+            background-size: cover;
+        
+    }
+    
+  }
